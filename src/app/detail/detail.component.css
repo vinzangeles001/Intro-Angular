@@ -1,0 +1,37 @@
+#grid1{
+    grid-area: left;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#grid2{
+    grid-area: right;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+  }
+
+#grid{
+    grid-area: navigation;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@media screen and (orientation: portrait){
+    .grid{
+        grid-template-areas: 
+        "btn" 
+        "grid1" 
+        "grid2";
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 1fr;
+    }
+}
+    

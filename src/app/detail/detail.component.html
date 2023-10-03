@@ -1,0 +1,25 @@
+<div id = "btn">
+    <button *ngFor= "let music of musics" (click)="select(music)">{{music.songName | uppercase}}</button>
+    
+</div>
+
+<div id = "grid">
+
+    <div id = "grid1">
+        <div *ngIf= "selected">
+            <br>
+            <img src="assets\images\{{selected.songPic}}" >
+        </div>
+    </div>
+
+    <div id = "grid2">
+        <div *ngIf= "selected">
+            <h1>{{selected.songName}}</h1>
+            <p>Artist: {{selected.songArtist}}</p>
+            <p>Genre: {{selected.songGenre}}</p>
+            <p>Year release: {{selected.songYrRel}}</p>
+            <br>
+        </div>
+
+    </div>
+</div>
